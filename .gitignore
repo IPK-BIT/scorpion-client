@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+*.pyzw
+*.pyc
+
+# Poetry
+.venv/
+.poetry/
+
+# Build Artifacts
+dist/
