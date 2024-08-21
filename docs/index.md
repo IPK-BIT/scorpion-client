@@ -58,11 +58,11 @@ This snippet shows how to set up a data source for Matomo, extract web statistic
 We welcome contributions to enhance the Scorpion Client. To contribute, please follow these steps:
 
 -   Fork the repository.
--   Create a new branch for your feature: git checkout -b feature/your-feature-name.
--   Make your changes and commit them: git commit -m "Add your changes".
--   Push to the branch: git push origin feature/your-feature-name.
+-   Create a new branch for your feature: `git checkout -b feature/your-feature-name`.
+-   Make your changes and commit them: `git commit -m "Add your changes"`.
+-   Push to the branch: `git push origin feature/your-feature-name`.
 
 ## License
-Scorpion Client is licensed under the MIT License. See the LICENSE file for more details.
+Scorpion Client is licensed under the MIT License. See the [LICENSE](https://github.com/IPK-BIT/scorpion-client/blob/main/LICENSE) file for more details.
 
 This documentation provides a starting point for using the Scorpion Client. For more detailed information, refer to the individual modules and classes within the package.

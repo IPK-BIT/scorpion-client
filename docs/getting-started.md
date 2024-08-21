@@ -72,5 +72,5 @@ To run your script automatically at regular intervals, you can use cron jobs on 
 2. Add a Cron Job: Add a line to schedule your script. For example, to run the script every first day of a month at midnight, add:
 
 ```sh
-0 0 1 * * cd /home/ubuntu/scorpion-submission && source /home/ubuntu/.venv/myenv/bin/activate && /usr/bin/python3 /home/ubuntu/scorpion-submission/main.py
+0 0 1 * * cd /home/ubuntu/scorpion-submission && source /home/ubuntu/.venv/myenv/bin/activate && python3 main.py
 ```
