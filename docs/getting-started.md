@@ -2,7 +2,7 @@
 
 ## Simple Example
 
-This guide helps you set up an automatic KPI submission to Scorpion using Matomo and Dimensions. You can use this guide as a starting point and adapt it to your setup.
+This guide helps you set up an automatic KPI submission to Scorpion using Matomo. You can use this guide as a starting point and adapt it to your setup.
 After this tutorial, you will have a project structure similar to this:
 
 ```console
@@ -22,13 +22,11 @@ SERVICE_NAME='YOUR-SERVICE-ABBREVIATION'
 MATOMO_AUTH_TOKEN='YOUR-MATOMO-AUTH-TOKEN'
 MATOMO_BASE_URL='https://matomo.cloud'
 MATOMO_SITE_ID='42'
-DIMENSIONS_BASE_URL='https://app.dimensions.ai'
-DIMENSIONS_API_KEY='YOUR-DIMENSIONS-API-KEY'
 ```
 
 ### main.py
 
-Now, let's write a simple Python script that uses the Scorpion Client to perform some operations. This example assumes you're interacting with an API provided by Scorpion.
+Now, let's write a simple Python script that uses the Scorpion Client to perform some operations. This example assumes you are using the provided mapping between Matomo and the Scorpion KPI.
 
 ```py title="main.py"
 import os
@@ -44,13 +42,8 @@ if __name__ == '__main__':
     web_stat_data = matomo.extract({'site_id': os.getenv('MATOMO_SITE_ID'), 'period': 'month', 'date': 'lastMonth'})
     web_stats = matomo.transform(web_stat_data)
 
-    dimensions = DataSource('dimensions', Dimensions(os.getenv('DIMENSIONS_BASE_URL'), os.getenv('DIMENSIONS_API_KEY')))
-    citations_data = dimensions.extract({})
-    citations = dimensions.transform(citations_data)
-
     results = {
-        **web_stats,
-        **citations
+        **web_stats
     }
 
     client = ScorpionClient(os.getenv('BASE_URL'), os.getenv('API_KEY'))

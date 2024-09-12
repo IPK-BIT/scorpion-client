@@ -10,8 +10,8 @@ nav:
     - Plugins: reference/plugins.md
     - Data Sources: 
       - Overview: reference/data-source-plugins/overview.md
-      - Dimensions: reference/data-source-plugins/dimensions.md
       - Matomo: reference/data-source-plugins/matomo.md
+      - NocoDB: reference/data-source-plugins/nocodb.md
 theme:
   name: material
   logo: assets/favicon.png
